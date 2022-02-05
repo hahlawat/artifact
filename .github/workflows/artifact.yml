@@ -5,12 +5,12 @@ env:
 jobs:
   main:
       runs-on: ubuntu-latest
-  steps:
-    - name: checkout the code
-      uses: actions/checkout@v2
+      steps:
+         - name: checkout the code
+           uses: actions/checkout@v2
       
-    - name: upload the artifact
-      uses: actions/upload-artifact@v2
-      with:
-        name: $env{{env.ARTIFACT_NAME}}
-        path: .
+         - name: upload the artifact
+           uses: actions/upload-artifact@v2
+           with:
+            name: $env{{env.ARTIFACT_NAME}}
+            path: .
