@@ -10,7 +10,7 @@ jobs:
            uses: actions/checkout@v2
            
          - name: create a file
-           run: mkdir folder && touch mkdir/xyz
+           run: mkdir folder && touch folder/xyz
            
          - name: view files
            run: ls -al 
