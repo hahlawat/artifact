@@ -8,9 +8,17 @@ jobs:
       steps:
          - name: checkout the code
            uses: actions/checkout@v2
-      
+           
+         - name: create a file
+           run: mkdir folder && touch mkdir/xyz
+           
+         - name: view files
+           run: ls -al 
+
          - name: upload the artifact
            uses: actions/upload-artifact@v2
            with:
             name: ${{env.ARTIFACT_NAME}}
             path: .
+            
+            
